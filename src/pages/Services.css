@@ -1,0 +1,148 @@
+.services-hero {
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-detail {
+  background-color: var(--bg-light);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 2rem 0;
+}
+
+.service-detail.reverse {
+  direction: rtl;
+}
+
+.service-detail.reverse > * {
+  direction: ltr;
+}
+
+.service-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-detail-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.service-info h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.service-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.service-features {
+  list-style: none;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.feature-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.pricing-section {
+  background-color: var(--bg-white);
+  text-align: center;
+}
+
+.pricing-intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.pricing-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pricing-feature {
+  padding: 2rem;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+}
+
+.pricing-feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.pricing-feature p {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .service-detail.reverse {
+    direction: ltr;
+  }
+  
+  .service-image {
+    order: -1;
+  }
+  
+  .pricing-features {
+    grid-template-columns: 1fr;
+  }
+}
