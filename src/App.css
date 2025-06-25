@@ -13,7 +13,7 @@
   --bg-light: #f7fafc;
   --bg-white: #ffffff;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --max-width: 1200px;
+  --max-width: 1400px;
 }
 
 body {
@@ -39,7 +39,19 @@ main {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .section {
