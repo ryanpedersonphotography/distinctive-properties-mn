@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import Lightbox from '../components/Lightbox';
 import './Gallery.css';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const galleryItems = [
     { id: 1, category: 'photography', title: 'Contemporary Lake Home', type: 'Exterior Photography', image: '/images/real-photos/DSC_3911.jpg' },
@@ -26,6 +29,19 @@ const Gallery = () => {
   const filteredItems = filter === 'all' 
     ? galleryItems 
     : galleryItems.filter(item => item.category === filter);
+
+  const openLightbox = (index) => {
+    setSelectedImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const navigateLightbox = (index) => {
+    setSelectedImageIndex(index);
+  };
 
   return (
     <>
@@ -84,6 +100,7 @@ const Gallery = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
+                onClick={() => openLightbox(index)}
               >
                 <div className="gallery-image">
                   <img src={item.image} alt={item.title} />
@@ -133,6 +150,14 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+      
+      <Lightbox
+        isOpen={lightboxOpen}
+        onClose={closeLightbox}
+        images={filteredItems}
+        currentIndex={selectedImageIndex}
+        onNavigate={navigateLightbox}
+      />
     </>
   );
 };
