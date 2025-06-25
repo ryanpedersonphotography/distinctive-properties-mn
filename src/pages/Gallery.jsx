@@ -7,26 +7,20 @@ const Gallery = () => {
   const [filter, setFilter] = useState('all');
 
   const galleryItems = [
-    { id: 1, category: 'photography', title: 'Lakefront Estate', type: 'Exterior Photography' },
-    { id: 2, category: 'aerial', title: 'Waterfront Property Aerial', type: 'Drone Photography' },
-    { id: 3, category: 'photography', title: 'Modern Kitchen', type: 'Interior Photography' },
-    { id: 4, category: 'video', title: 'Property Tour Video', type: 'Video Production' },
-    { id: 5, category: 'matterport', title: 'Virtual Home Tour', type: '3D Matterport' },
-    { id: 6, category: 'photography', title: 'Twilight Exterior', type: 'Twilight Photography' },
-    { id: 7, category: 'aerial', title: 'Lake Community Overview', type: 'Aerial Photography' },
-    { id: 8, category: 'photography', title: 'Luxury Living Room', type: 'Interior Photography' },
-    { id: 9, category: 'video', title: 'Lifestyle Video', type: 'Video Production' },
-    { id: 10, category: 'aerial', title: 'Property Boundaries', type: 'Drone Mapping' },
-    { id: 11, category: 'photography', title: 'Master Bedroom Suite', type: 'Interior Photography' },
-    { id: 12, category: 'matterport', title: 'Commercial Space Tour', type: '3D Virtual Tour' }
+    { id: 1, category: 'photography', title: 'Contemporary Lake Home', type: 'Exterior Photography', image: '/images/real-photos/DSC_3911.jpg' },
+    { id: 2, category: 'aerial', title: 'Rural Property Overview', type: 'Drone Photography', image: '/images/real-photos/DJI_0984.jpg' },
+    { id: 3, category: 'photography', title: 'Vaulted Great Room', type: 'Interior Photography', image: '/images/real-photos/_DSC4037.jpg' },
+    { id: 4, category: 'photography', title: 'Modern Kitchen Design', type: 'Interior Photography', image: '/images/real-photos/DSC_9722-Enhanced-NR.jpg' },
+    { id: 5, category: 'aerial', title: 'Lakefront Property', type: 'Aerial Photography', image: '/images/real-photos/DJI_0445.jpg' },
+    { id: 6, category: 'photography', title: 'Luxury Master Suite', type: 'Interior Photography', image: '/images/real-photos/DSC_9403-Enhanced-NR.jpg' },
+    { id: 7, category: 'photography', title: 'Twilight Architecture', type: 'Twilight Photography', image: '/images/real-photos/DSC_1246.jpg' },
+    { id: 8, category: 'photography', title: 'Open Concept Living', type: 'Interior Photography', image: '/images/real-photos/DSC02853.jpg' }
   ];
 
   const categories = [
     { id: 'all', label: 'All Work' },
     { id: 'photography', label: 'Photography' },
-    { id: 'aerial', label: 'Aerial/Drone' },
-    { id: 'video', label: 'Video' },
-    { id: 'matterport', label: '3D Tours' }
+    { id: 'aerial', label: 'Aerial/Drone' }
   ];
 
   const filteredItems = filter === 'all' 
@@ -92,7 +86,7 @@ const Gallery = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="gallery-image">
-                  <div className="image-placeholder">{item.title}</div>
+                  <img src={item.image} alt={item.title} />
                   <div className="gallery-overlay">
                     <h3>{item.title}</h3>
                     <p>{item.type}</p>

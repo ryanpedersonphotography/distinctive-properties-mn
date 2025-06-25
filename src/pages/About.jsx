@@ -74,7 +74,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="image-placeholder">Our Team at Work</div>
+              <img src="/images/real-photos/DSC_3231.jpg" alt="Professional real estate photography in Minnesota" />
             </motion.div>
           </div>
         </div>

@@ -121,7 +121,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src="/images/hero/hero-services.jpg" alt="Professional Real Estate Photography Equipment" />
+              <img src="/images/real-photos/DSC_1228.jpg" alt="Modern lakefront home with professional photography" />
             </motion.div>
           </div>
         </div>

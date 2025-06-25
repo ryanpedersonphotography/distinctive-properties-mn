@@ -35,6 +35,14 @@
   position: relative;
 }
 
+.about-image-content img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
 .stats-section {
   background-color: var(--bg-light);
 }

@@ -19,7 +19,7 @@ const Services = () => {
         'Detail shots of key features',
         'Quick 24-48 hour turnaround'
       ],
-      image: '/images/services/interior-photo.jpg'
+      image: '/images/real-photos/_DSC4037.jpg'
     },
     {
       id: 'video',
@@ -34,7 +34,7 @@ const Services = () => {
         'Social media versions included',
         'Walkthrough and lifestyle videos'
       ],
-      image: '/images/services/video-production.jpg'
+      image: '/images/real-photos/DSC_9627.jpg'
     },
     {
       id: 'aerial',
@@ -49,7 +49,7 @@ const Services = () => {
         'Highlight nearby amenities',
         'Lake and waterfront specialists'
       ],
-      image: '/images/services/aerial-drone.jpg'
+      image: '/images/real-photos/DJI_0438.jpg'
     },
     {
       id: 'matterport',
@@ -64,7 +64,7 @@ const Services = () => {
         'VR compatible tours',
         'Branded and unbranded options'
       ],
-      image: '/images/services/matterport-3d.jpg'
+      image: '/images/real-photos/DSC02842.jpg'
     }
   ];
 
