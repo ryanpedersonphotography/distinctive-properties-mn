@@ -56,6 +56,9 @@ main {
 
 .section {
   padding: 80px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 .section-title {

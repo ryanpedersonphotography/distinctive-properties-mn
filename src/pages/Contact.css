@@ -3,6 +3,8 @@
   padding: 100px 0 80px;
   text-align: center;
   color: var(--text-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .contact-content {
@@ -14,6 +16,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .contact-info-section h2 {
