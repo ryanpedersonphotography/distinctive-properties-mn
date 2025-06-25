@@ -121,7 +121,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="image-placeholder">Professional Equipment</div>
+              <img src="/images/hero/hero-services.jpg" alt="Professional Real Estate Photography Equipment" />
             </motion.div>
           </div>
         </div>

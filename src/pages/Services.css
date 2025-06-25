@@ -46,6 +46,12 @@
   box-shadow: var(--shadow);
 }
 
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .service-header {
   display: flex;
   align-items: center;

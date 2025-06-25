@@ -19,7 +19,7 @@ const Services = () => {
         'Detail shots of key features',
         'Quick 24-48 hour turnaround'
       ],
-      image: '/placeholder-images/interior-photo.jpg'
+      image: '/images/services/interior-photo.jpg'
     },
     {
       id: 'video',
@@ -34,7 +34,7 @@ const Services = () => {
         'Social media versions included',
         'Walkthrough and lifestyle videos'
       ],
-      image: '/placeholder-images/video-production.jpg'
+      image: '/images/services/video-production.jpg'
     },
     {
       id: 'aerial',
@@ -49,7 +49,7 @@ const Services = () => {
         'Highlight nearby amenities',
         'Lake and waterfront specialists'
       ],
-      image: '/placeholder-images/aerial-drone.jpg'
+      image: '/images/services/aerial-drone.jpg'
     },
     {
       id: 'matterport',
@@ -64,7 +64,7 @@ const Services = () => {
         'VR compatible tours',
         'Branded and unbranded options'
       ],
-      image: '/placeholder-images/matterport-3d.jpg'
+      image: '/images/services/matterport-3d.jpg'
     }
   ];
 
@@ -110,7 +110,7 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <div className="service-image">
-                <div className="image-placeholder">{service.title}</div>
+                <img src={service.image} alt={service.title} />
               </div>
               <div className="service-info">
                 <div className="service-header">
