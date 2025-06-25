@@ -15,6 +15,8 @@ const Contact = () => {
     preferredDate: ''
   });
 
+  const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
+
   const services = [
     'Real Estate Photography',
     'Video Production',
@@ -36,11 +38,57 @@ const Contact = () => {
     }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will contact you within 24 hours.');
+    setFormStatus('submitting');
+
+    // Prepare form data
+    const formBody = encode({
+      'form-name': 'contact',
+      'name': formData.name,
+      'email': formData.email,
+      'phone': formData.phone,
+      'propertyAddress': formData.propertyAddress,
+      'services': formData.services.join(', '),
+      'preferredDate': formData.preferredDate,
+      'message': formData.message,
+      'bot-field': ''
+    });
+
+    fetch('/?no-cache=1', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formBody
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+      setFormStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        propertyAddress: '',
+        services: [],
+        message: '',
+        preferredDate: ''
+      });
+      
+      setTimeout(() => {
+        setFormStatus('idle');
+      }, 5000);
+    })
+    .catch(error => {
+      console.error('Form error:', error);
+      setFormStatus('error');
+    });
   };
 
   return (
@@ -93,7 +141,7 @@ const Contact = () => {
                   <FaEnvelope className="contact-detail-icon" />
                   <div>
                     <h3>Email</h3>
-                    <a href="mailto:robert.pederson@gmail.com">robert.pederson@gmail.com</a>
+                    <a href="mailto:rpederson@gmail.com">rpederson@gmail.com</a>
                   </div>
                 </div>
                 
@@ -139,7 +187,16 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit} 
+                className="contact-form"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 <h2>Request a Quote</h2>
                 
                 <div className="form-group">
@@ -230,9 +287,35 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn submit-btn">
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="btn submit-btn"
+                  disabled={formStatus === 'submitting'}
+                >
+                  {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
                 </button>
+
+                {formStatus === 'success' && (
+                  <motion.div 
+                    className="form-success"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p>Thank you for your inquiry! We'll contact you within 24 hours.</p>
+                  </motion.div>
+                )}
+
+                {formStatus === 'error' && (
+                  <motion.div 
+                    className="form-error"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p>Something went wrong. Please try again or email us directly.</p>
+                  </motion.div>
+                )}
               </form>
             </motion.div>
           </div>

@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaCamera, FaVideo, FaPlane, FaCube } from 'react-icons/fa';
+import { useRef } from 'react';
 import SEO from '../components/SEO';
 import './Home.css';
 
 const Home = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const services = [
     {
       icon: <FaCamera />,
@@ -36,7 +44,17 @@ const Home = () => {
         keywords="real estate photography Brainerd, drone photography Minnesota, Matterport tours Brainerd Lakes, real estate video Central Minnesota, property photography Brainerd MN"
       />
       
-      <section className="hero">
+      <section className="hero" ref={heroRef}>
+        <video 
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videos/hero-drone.mp4" type="video/mp4" />
+          <source src="/videos/hero-drone.webm" type="video/webm" />
+        </video>
         <div className="hero-overlay"></div>
         <div className="hero-content container">
           <motion.h1 

@@ -104,10 +104,6 @@ const Gallery = () => {
               >
                 <div className="gallery-image">
                   <img src={item.image} alt={item.title} />
-                  <div className="gallery-overlay">
-                    <h3>{item.title}</h3>
-                    <p>{item.type}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
