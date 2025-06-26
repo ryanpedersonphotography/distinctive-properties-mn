@@ -44,11 +44,13 @@ const Video = () => {
       
       <div className="video-page">
         <section className="hero-section">
-          <div className="hero-content">
-            <h1>Professional Real Estate Videos</h1>
-            <p className="hero-subtitle">
-              Cinematic property tours that tell your home's story
-            </p>
+          <div className="container">
+            <div className="hero-content">
+              <h1>Professional Real Estate Videos</h1>
+              <p className="hero-subtitle">
+                Cinematic property tours that tell your home's story
+              </p>
+            </div>
           </div>
         </section>
 

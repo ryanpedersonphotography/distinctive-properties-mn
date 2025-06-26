@@ -32,11 +32,13 @@ const Matterport = () => {
       
       <div className="matterport-page">
         <section className="hero-section">
-          <div className="hero-content">
-            <h1>3D Matterport Virtual Tours</h1>
-            <p className="hero-subtitle">
-              Immersive property experiences that bring listings to life
-            </p>
+          <div className="container">
+            <div className="hero-content">
+              <h1>3D Matterport Virtual Tours</h1>
+              <p className="hero-subtitle">
+                Immersive property experiences that bring listings to life
+              </p>
+            </div>
           </div>
         </section>
 
