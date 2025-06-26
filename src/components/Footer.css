@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--primary-color);
   color: var(--text-light);
-  margin-top: auto;
+  margin-top: 80px;
 }
 
 .footer-content {
