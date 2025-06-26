@@ -24,9 +24,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-dark);
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
 
 .App {
@@ -59,13 +56,9 @@ main {
 
 .section {
   padding: 80px 0;
-  width: 100%;
-}
-
-/* Full width sections */
-.full-width {
-  width: 100%;
-  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 .section-title {
