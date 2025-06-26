@@ -279,19 +279,39 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="preferredTime">Preferred Shoot Time</label>
-                  <select
-                    id="preferredTime"
-                    name="preferredTime"
-                    value={formData.preferredTime}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select a time</option>
-                    <option value="morning">Morning (8am - 12pm)</option>
-                    <option value="afternoon">Afternoon (12pm - 5pm)</option>
-                    <option value="evening">Evening (5pm - sunset)</option>
-                    <option value="flexible">Flexible</option>
-                  </select>
+                  <label>Preferred Shoot Time</label>
+                  <div className="radio-group">
+                    <label className="radio-label">
+                      <input
+                        type="radio"
+                        name="preferredTime"
+                        value="morning"
+                        checked={formData.preferredTime === 'morning'}
+                        onChange={handleChange}
+                      />
+                      Morning
+                    </label>
+                    <label className="radio-label">
+                      <input
+                        type="radio"
+                        name="preferredTime"
+                        value="afternoon"
+                        checked={formData.preferredTime === 'afternoon'}
+                        onChange={handleChange}
+                      />
+                      Afternoon
+                    </label>
+                    <label className="radio-label">
+                      <input
+                        type="radio"
+                        name="preferredTime"
+                        value="flexible"
+                        checked={formData.preferredTime === 'flexible'}
+                        onChange={handleChange}
+                      />
+                      Flexible
+                    </label>
+                  </div>
                 </div>
 
                 <div className="form-group">
