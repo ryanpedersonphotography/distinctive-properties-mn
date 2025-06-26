@@ -12,7 +12,8 @@ const Contact = () => {
     propertyAddress: '',
     services: [],
     message: '',
-    preferredDate: ''
+    preferredDate: '',
+    preferredTime: ''
   });
 
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
@@ -57,6 +58,7 @@ const Contact = () => {
       'propertyAddress': formData.propertyAddress,
       'services': formData.services.join(', '),
       'preferredDate': formData.preferredDate,
+      'preferredTime': formData.preferredTime,
       'message': formData.message,
       'bot-field': ''
     });
@@ -78,7 +80,8 @@ const Contact = () => {
         propertyAddress: '',
         services: [],
         message: '',
-        preferredDate: ''
+        preferredDate: '',
+        preferredTime: ''
       });
       
       setTimeout(() => {
@@ -273,6 +276,22 @@ const Contact = () => {
                     value={formData.preferredDate}
                     onChange={handleChange}
                   />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="preferredTime">Preferred Shoot Time</label>
+                  <select
+                    id="preferredTime"
+                    name="preferredTime"
+                    value={formData.preferredTime}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select a time</option>
+                    <option value="morning">Morning (8am - 12pm)</option>
+                    <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                    <option value="evening">Evening (5pm - sunset)</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
                 </div>
 
                 <div className="form-group">
