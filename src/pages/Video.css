@@ -5,12 +5,20 @@
   background-color: #fff;
 }
 
+/* Container */
+.video-page .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 /* Hero Section */
 .video-page .hero-section {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   color: white;
   padding: 120px 0 80px;
   text-align: center;
+  width: 100%;
 }
 
 .video-page .hero-content h1 {
@@ -30,6 +38,7 @@
 .video-intro {
   padding: 80px 0;
   background-color: var(--light-gray);
+  width: 100%;
 }
 
 .intro-content {
@@ -53,6 +62,7 @@
 /* Featured Videos Section */
 .featured-videos {
   padding: 80px 0;
+  width: 100%;
 }
 
 .featured-videos h2 {
@@ -124,6 +134,7 @@
 .video-services {
   padding: 80px 0;
   background-color: var(--light-gray);
+  width: 100%;
 }
 
 .video-services h2 {
@@ -172,6 +183,7 @@
 /* Video Benefits Section */
 .video-benefits {
   padding: 80px 0;
+  width: 100%;
 }
 
 .video-benefits h2 {
@@ -209,6 +221,7 @@
 .video-process {
   padding: 80px 0;
   background-color: var(--light-gray);
+  width: 100%;
 }
 
 .video-process h2 {
@@ -262,6 +275,7 @@
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   color: white;
   text-align: center;
+  width: 100%;
 }
 
 .cta-content h2 {
@@ -297,7 +311,17 @@
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  .video-page .container {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 768px) {
+  .video-page .container {
+    padding: 0 20px;
+  }
+  
   .video-page .hero-content h1 {
     font-size: 2rem;
   }
