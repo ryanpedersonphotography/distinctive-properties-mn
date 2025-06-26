@@ -45,7 +45,7 @@ const SEO = ({ title, description, keywords, image }) => {
       "name": "Distinctive Properties of Minnesota",
       "image": "https://distinctivepropertiesmn.com/og-image.jpg",
       "url": "https://distinctivepropertiesmn.com",
-      "description": "Professional real estate photography, video, aerial drone, and 3D Matterport services in Brainerd Lakes Area and Central Minnesota.",
+      "description": "Professional real estate photography, video, aerial drone, and 3D Matterport virtual tours in Brainerd Lakes Area and Central Minnesota.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Brainerd",

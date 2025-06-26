@@ -55,7 +55,7 @@ const Footer = () => {
             </p>
             <p>
               <FaEnvelope className="contact-icon" />
-              <a href="mailto:robert.pederson@gmail.com">robert.pederson@gmail.com</a>
+              <a href="mailto:bpederson@distinctivepropertiesmn.com">bpederson@distinctivepropertiesmn.com</a>
             </p>
             <p>
               <FaPhone className="contact-icon" />
