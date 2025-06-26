@@ -3,13 +3,13 @@
   padding: 100px 0 80px;
   text-align: center;
   color: var(--text-light);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
 .about-intro {
   background-color: var(--bg-white);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -47,7 +47,7 @@
 
 .stats-section {
   background-color: var(--bg-light);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -92,7 +92,7 @@
 
 .values-section {
   background-color: var(--bg-white);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -124,7 +124,7 @@
 
 .service-area {
   background-color: var(--bg-light);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 

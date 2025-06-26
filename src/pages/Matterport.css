@@ -18,7 +18,7 @@
   color: white;
   padding: 120px 0 80px;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -39,7 +39,7 @@
 .matterport-intro {
   padding: 80px 0;
   background-color: var(--light-gray);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -64,7 +64,7 @@
 /* Featured Tours Section */
 .featured-tours {
   padding: 80px 0;
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -148,7 +148,7 @@
 .matterport-benefits {
   padding: 80px 0;
   background-color: var(--light-gray);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -188,7 +188,7 @@
 /* Features Section */
 .matterport-features {
   padding: 80px 0;
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -236,7 +236,7 @@
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   color: white;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 

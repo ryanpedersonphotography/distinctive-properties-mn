@@ -3,13 +3,13 @@
   padding: 100px 0 80px;
   text-align: center;
   color: var(--text-light);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
 .gallery-section {
   background-color: var(--bg-light);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -120,7 +120,7 @@
 
 .testimonial-section {
   background-color: var(--bg-white);
-  width: 100vw;
+  width: 100%;
   margin-left: calc(-50vw + 50%);
 }
 
