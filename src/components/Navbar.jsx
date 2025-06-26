@@ -43,6 +43,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/video" className="nav-link" onClick={closeMenu}>
+              Video
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/matterport" className="nav-link" onClick={closeMenu}>
               3D Tours
             </Link>
