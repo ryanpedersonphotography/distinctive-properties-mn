@@ -5,7 +5,7 @@
 }
 
 .footer-content {
-  padding: 100px 20px 60px;
+  padding: 140px 20px 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
@@ -115,7 +115,7 @@
 
 @media (max-width: 768px) {
   .footer-content {
-    padding: 70px 20px 50px;
+    padding: 100px 20px 50px;
     gap: 30px;
   }
   
