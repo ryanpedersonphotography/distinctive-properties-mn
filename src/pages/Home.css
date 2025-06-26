@@ -123,6 +123,8 @@
 
 .services-preview {
   background-color: var(--bg-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .services-grid {
@@ -208,6 +210,8 @@
 .cta-section {
   background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
   color: var(--text-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .cta-content {

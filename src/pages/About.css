@@ -9,6 +9,8 @@
 
 .about-intro {
   background-color: var(--bg-white);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .about-content-grid {
@@ -45,6 +47,8 @@
 
 .stats-section {
   background-color: var(--bg-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .stats-grid {
@@ -88,6 +92,8 @@
 
 .values-section {
   background-color: var(--bg-white);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .values-grid {
@@ -118,6 +124,8 @@
 
 .service-area {
   background-color: var(--bg-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .service-area-intro {

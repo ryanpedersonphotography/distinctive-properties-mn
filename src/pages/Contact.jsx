@@ -201,6 +201,7 @@ const Contact = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
                 <h2>Request a Quote</h2>
+                <div className="form-tagline">Free Quote • Fast Response</div>
                 
                 <div className="form-group">
                   <label htmlFor="name">Name *</label>

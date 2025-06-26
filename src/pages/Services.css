@@ -22,6 +22,8 @@
 
 .services-detail {
   background-color: var(--bg-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .service-detail {

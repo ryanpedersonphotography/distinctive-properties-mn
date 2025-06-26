@@ -9,6 +9,8 @@
 
 .gallery-section {
   background-color: var(--bg-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .gallery-filters {
@@ -118,6 +120,8 @@
 
 .testimonial-section {
   background-color: var(--bg-white);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .testimonials {
