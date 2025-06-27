@@ -38,7 +38,7 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onNavigate }) => {
               aria-label="Close gallery"
               title="Close (ESC)"
             >
-              <FaTimes />
+              ×
             </button>
             
             {currentIndex > 0 && (
