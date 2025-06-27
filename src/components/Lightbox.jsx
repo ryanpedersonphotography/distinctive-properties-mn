@@ -32,7 +32,12 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onNavigate }) => {
           onClick={onClose}
         >
           <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={onClose}>
+            <button 
+              className="lightbox-close" 
+              onClick={onClose}
+              aria-label="Close gallery"
+              title="Close (ESC)"
+            >
               <FaTimes />
             </button>
             
