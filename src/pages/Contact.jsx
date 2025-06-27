@@ -291,6 +291,7 @@ const Contact = () => {
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}
+                    min={new Date().toISOString().split('T')[0]}
                   />
                 </div>
 
