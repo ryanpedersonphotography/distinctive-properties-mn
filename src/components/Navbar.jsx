@@ -59,7 +59,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
-              Contact
+              Book Now
             </NavLink>
           </li>
         </ul>
