@@ -2,7 +2,10 @@
 
 /* Hero Section - Matching Gallery Style */
 .aerial-hero {
-  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+  position: relative;
+  background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('/images/real-photos/DJI_0438.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 100px 0 80px;
   text-align: center;
   color: var(--text-light);

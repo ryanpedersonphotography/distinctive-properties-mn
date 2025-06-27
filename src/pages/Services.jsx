@@ -21,7 +21,7 @@ const Services = () => {
       ],
       image: '/images/real-photos/_DSC4037.jpg',
       link: '/gallery',
-      linkText: 'View Gallery'
+      linkText: 'View Stills'
     },
     {
       id: 'video',

@@ -14,9 +14,12 @@
 
 /* Hero Section */
 .matterport-page .hero-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  position: relative;
+  background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('/images/real-photos/DSC02842.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 120px 0 80px;
+  padding: 100px 0 80px;
   text-align: center;
   width: 100%;
   margin-left: calc(-50vw + 50%);
@@ -29,10 +32,10 @@
 }
 
 .matterport-page .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 /* Intro Section */
