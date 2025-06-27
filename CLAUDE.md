@@ -60,6 +60,12 @@ src/
 
 ## Key Development Patterns
 
+### Routing & Navigation
+- **CRITICAL**: Always use React Router's `<Link>` component for internal navigation
+- NEVER use `<a href="/path">` for internal links - use `<Link to="/path">`
+- Import Link from 'react-router-dom' when needed
+- External links can use regular `<a>` tags with `target="_blank" rel="noopener noreferrer"`
+
 ### Styling
 - Uses CSS variables defined in `:root` for consistent theming
 - Component-specific CSS files (e.g., `Home.css`, `Gallery.css`)

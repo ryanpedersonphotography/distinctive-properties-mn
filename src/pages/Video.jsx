@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import VideoLightbox from '../components/VideoLightbox';
 import './Video.css';
@@ -64,7 +65,7 @@ const Video = () => {
               <p className="hero-subtitle">
                 Cinematic property tours that tell your home's story
               </p>
-              <a href="/contact" className="hero-cta">Schedule Video Shoot</a>
+              <Link to="/contact" className="hero-cta">Schedule Video Shoot</Link>
             </div>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import MatterportLightbox from '../components/MatterportLightbox';
 import './Matterport.css';
@@ -192,7 +193,7 @@ const Matterport = () => {
                 Give your listings the competitive edge with immersive Matterport virtual tours 
                 that help properties sell faster and for more money.
               </p>
-              <a href="/contact" className="cta-button">Schedule Your 3D Tour</a>
+              <Link to="/contact" className="cta-button">Schedule Your 3D Tour</Link>
             </div>
           </div>
         </section>
