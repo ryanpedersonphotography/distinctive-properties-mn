@@ -52,8 +52,7 @@ const Home = () => {
           muted
           playsInline
         >
-          <source src="/videos/hero-drone.mp4" type="video/mp4" />
-          <source src="/videos/hero-drone.webm" type="video/webm" />
+          <source src="/videos/hero-loop.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
         <div className="hero-content container">
@@ -79,7 +78,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link to="/contact" className="btn">Get Started</Link>
+            <Link to="/contact" className="btn">Get Your Free Quote</Link>
             <Link to="/gallery" className="btn btn-secondary">View Portfolio</Link>
           </motion.div>
         </div>
