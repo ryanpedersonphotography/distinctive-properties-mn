@@ -69,6 +69,16 @@
   width: 100%;
 }
 
+.nav-link.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  height: 3px;
+}
+
 .nav-link-cta {
   background-color: var(--accent-color);
   color: var(--text-light);
@@ -84,6 +94,13 @@
 
 .nav-link-cta::after {
   display: none;
+}
+
+.nav-link-cta.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-icon {

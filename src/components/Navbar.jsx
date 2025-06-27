@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
@@ -28,39 +28,39 @@ const Navbar = () => {
         
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/" className="nav-link" onClick={closeMenu}>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/services" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/services" className="nav-link" onClick={closeMenu}>
               Services
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/gallery" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/gallery" className="nav-link" onClick={closeMenu}>
               Gallery
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/video" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/video" className="nav-link" onClick={closeMenu}>
               Video
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/matterport" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/matterport" className="nav-link" onClick={closeMenu}>
               3D Tours
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link" onClick={closeMenu}>
+            <NavLink to="/about" className="nav-link" onClick={closeMenu}>
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
+            <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

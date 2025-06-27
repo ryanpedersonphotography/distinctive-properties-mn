@@ -15,8 +15,8 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
@@ -91,28 +91,45 @@
 
 .contact-form {
   background-color: var(--bg-white);
-  padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
+  padding: 3.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(49, 130, 206, 0.03) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 
 .contact-form h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-color);
+  font-weight: 700;
+  text-align: center;
 }
 
 .form-tagline {
   text-align: center;
   color: var(--accent-color);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form-row {
@@ -123,70 +140,127 @@
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+  padding: 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  background-color: #f8fafc;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
 }
 
 .checkbox-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   cursor: pointer;
   font-weight: 400;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.checkbox-label:hover {
+  background-color: white;
 }
 
 .checkbox-label input[type="checkbox"] {
   width: auto;
   cursor: pointer;
+  width: 28px;
+  height: 28px;
+  accent-color: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .radio-group {
   display: flex;
   gap: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  justify-content: center;
 }
 
 .radio-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.radio-label:hover {
+  background-color: white;
+  border-color: var(--accent-color);
 }
 
 .radio-label input[type="radio"] {
   width: auto;
   cursor: pointer;
+  width: 28px;
+  height: 28px;
+  accent-color: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .submit-btn {
   width: 100%;
-  padding: 1rem;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-hover) 100%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
@@ -204,7 +278,7 @@
   }
   
   .contact-form {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
   
   .radio-group {
@@ -215,23 +289,45 @@
 .submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+  background: #94a3b8;
+  box-shadow: none;
+  transform: none;
 }
 
 .form-success {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
   background-color: #f0fdf4;
-  border: 1px solid #22c55e;
-  border-radius: 8px;
+  border: 2px solid #22c55e;
+  border-radius: 12px;
   color: #166534;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
 }
 
 .form-error {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
   background-color: #fef2f2;
-  border: 1px solid #ef4444;
-  border-radius: 8px;
+  border: 2px solid #ef4444;
+  border-radius: 12px;
   color: #991b1b;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 

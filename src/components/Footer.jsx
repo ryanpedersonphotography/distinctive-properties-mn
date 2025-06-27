@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,14 +13,8 @@ const Footer = () => {
             in the Brainerd Lakes Area and Central Minnesota.
           </p>
           <div className="social-links">
-            <a href="#" aria-label="Facebook" className="social-link">
-              <FaFacebook />
-            </a>
-            <a href="#" aria-label="Instagram" className="social-link">
+            <a href="https://www.instagram.com/distinctivepropertiesmn" aria-label="Instagram" className="social-link" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="social-link">
-              <FaLinkedin />
             </a>
           </div>
         </div>

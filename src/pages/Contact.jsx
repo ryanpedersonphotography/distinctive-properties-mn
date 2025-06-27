@@ -10,6 +10,7 @@ const Contact = () => {
     email: '',
     phone: '',
     propertyAddress: '',
+    squareFootage: '',
     services: [],
     message: '',
     preferredDate: '',
@@ -56,6 +57,7 @@ const Contact = () => {
       'email': formData.email,
       'phone': formData.phone,
       'propertyAddress': formData.propertyAddress,
+      'squareFootage': formData.squareFootage,
       'services': formData.services.join(', '),
       'preferredDate': formData.preferredDate,
       'preferredTime': formData.preferredTime,
@@ -78,6 +80,7 @@ const Contact = () => {
         email: '',
         phone: '',
         propertyAddress: '',
+        squareFootage: '',
         services: [],
         message: '',
         preferredDate: '',
@@ -200,8 +203,8 @@ const Contact = () => {
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
-                <h2>Request a Quote</h2>
-                <div className="form-tagline">Free Quote • Fast Response</div>
+                <h2>🏠 Request a Quote</h2>
+                <div className="form-tagline">Free Quote • Fast Response • Professional Service</div>
                 
                 <div className="form-group">
                   <label htmlFor="name">Name *</label>
@@ -253,7 +256,19 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label>Services Needed</label>
+                  <label htmlFor="squareFootage">Square Footage</label>
+                  <input
+                    type="text"
+                    id="squareFootage"
+                    name="squareFootage"
+                    value={formData.squareFootage}
+                    onChange={handleChange}
+                    placeholder="e.g., 2,500"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>📸 Services Needed</label>
                   <div className="checkbox-group">
                     {services.map(service => (
                       <label key={service} className="checkbox-label">
@@ -323,7 +338,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
-                    placeholder="Tell us about your property and any specific requirements..."
+                    placeholder="Tell us about your property, timeline, and any specific shots or features you'd like captured..."
                   />
                 </div>
 

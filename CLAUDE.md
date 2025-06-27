@@ -122,8 +122,72 @@ Contact details appear in:
 - `src/pages/Contact.jsx`
 - `src/components/SEO.jsx` (structured data)
 
+### Social Media
+- Instagram: @distinctivepropertiesmn
+- Footer displays only Instagram icon (Facebook and LinkedIn removed)
+
+### Navigation Active States
+The navbar uses React Router's NavLink component to show active page states:
+- Active links display in accent color with underline
+- Contact button has special active state styling
+- Mobile menu shows active state with background color
+- NavLink components automatically add 'active' class to current page
+
+### Recent UI Enhancements (June 26, 2025)
+
+#### Contact Form Redesign
+The contact form has been significantly enhanced for better user experience:
+- **Larger, bolder design**: Increased padding (3.5rem), larger fonts (2.5rem heading)
+- **Visual personality**: House emoji in header (🏠), camera emoji for services (📸)
+- **Improved layout**: 
+  - Services and time preference in styled containers with backgrounds
+  - Better spacing between form elements (2rem margins)
+  - Gradient submit button with hover animations
+- **Enhanced interactions**:
+  - Focus states with shadow rings
+  - Hover effects on checkboxes and radio buttons
+  - Animated success/error messages
+- **Form fields include**:
+  - Name, Email, Phone (in a two-column layout)
+  - Property Address
+  - Services checkboxes (styled grid)
+  - Preferred Date
+  - Preferred Shoot Time (radio buttons: Morning/Afternoon/Flexible)
+  - Additional Details textarea
+
 ## Performance Considerations
 - Images should be optimized before adding to the gallery
 - Lightbox component lazy loads images
 - CSS is split by component to reduce initial bundle size
 - Framer Motion animations are kept lightweight
+
+## CRITICAL: Layout Requirements
+
+### Body Styling (DO NOT MODIFY)
+The `body` element in `src/index.css` MUST maintain these specific styles for proper layout:
+
+```css
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+```
+
+**WARNING**: Removing `display: flex` and `place-items: center` will break the entire site layout. These properties are essential for centering the React app container properly.
+
+### Full-Width Sections
+- Use `width: 100%` (NOT `100vw`) to prevent horizontal scrolling
+- The negative margin technique (`margin-left: calc(-50vw + 50%)`) is used intentionally for full-width backgrounds
+- Container content should be constrained with `max-width: 1400px`
+
+## Version History
+
+### June 26, 2025
+- Added navigation active states with NavLink
+- Redesigned contact form with enhanced UI/UX
+- Removed Facebook and LinkedIn icons (Instagram only)
+- Fixed body layout issues (restored flex centering)
+- Updated Instagram link to @distinctivepropertiesmn
