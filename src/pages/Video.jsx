@@ -64,6 +64,7 @@ const Video = () => {
               <p className="hero-subtitle">
                 Cinematic property tours that tell your home's story
               </p>
+              <a href="/contact" className="hero-cta">Schedule Video Shoot</a>
             </div>
           </div>
         </section>

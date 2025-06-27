@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Video from './pages/Video';
 import Matterport from './pages/Matterport';
+import Aerial from './pages/Aerial';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import './App.css';
@@ -22,6 +23,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/video" element={<Video />} />
             <Route path="/matterport" element={<Matterport />} />
+            <Route path="/aerial" element={<Aerial />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

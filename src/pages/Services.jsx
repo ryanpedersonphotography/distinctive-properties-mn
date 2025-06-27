@@ -19,7 +19,9 @@ const Services = () => {
         'Detail shots of key features',
         'Quick 24-48 hour turnaround'
       ],
-      image: '/images/real-photos/_DSC4037.jpg'
+      image: '/images/real-photos/_DSC4037.jpg',
+      link: '/gallery',
+      linkText: 'View Gallery'
     },
     {
       id: 'video',
@@ -34,7 +36,9 @@ const Services = () => {
         'Social media versions included',
         'Walkthrough and lifestyle videos'
       ],
-      image: '/images/real-photos/DSC_9627.jpg'
+      image: '/images/real-photos/DSC_9627.jpg',
+      link: '/video',
+      linkText: 'View Videos'
     },
     {
       id: 'aerial',
@@ -49,7 +53,9 @@ const Services = () => {
         'Highlight nearby amenities',
         'Lake and waterfront specialists'
       ],
-      image: '/images/real-photos/DJI_0438.jpg'
+      image: '/images/real-photos/DJI_0438.jpg',
+      link: '/aerial',
+      linkText: 'View Aerial Services'
     },
     {
       id: 'matterport',
@@ -64,7 +70,9 @@ const Services = () => {
         'VR compatible tours',
         'Branded and unbranded options'
       ],
-      image: '/images/real-photos/DSC02842.jpg'
+      image: '/images/real-photos/DSC02842.jpg',
+      link: '/matterport',
+      linkText: 'View 3D Tours'
     }
   ];
 
@@ -126,6 +134,11 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                {service.link && (
+                  <Link to={service.link} className="service-link-button">
+                    {service.linkText}
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}

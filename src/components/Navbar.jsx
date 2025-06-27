@@ -48,6 +48,11 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
+            <NavLink to="/aerial" className="nav-link" onClick={closeMenu}>
+              Aerial
+            </NavLink>
+          </li>
+          <li className="nav-item">
             <NavLink to="/matterport" className="nav-link" onClick={closeMenu}>
               3D Tours
             </NavLink>

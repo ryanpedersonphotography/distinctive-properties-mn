@@ -41,11 +41,16 @@ src/
 │   ├── Navbar.jsx   # Navigation with mobile menu
 │   ├── Footer.jsx   # Footer with business info
 │   ├── Lightbox.jsx # Image gallery lightbox
+│   ├── VideoLightbox.jsx # Video player lightbox
+│   ├── MatterportLightbox.jsx # 3D tour lightbox
 │   └── SEO.jsx      # Dynamic meta tags & structured data
 ├── pages/           # Route pages
 │   ├── Home.jsx     # Landing page with hero & services
 │   ├── Services.jsx # Service offerings
 │   ├── Gallery.jsx  # Photo gallery with lightbox
+│   ├── Video.jsx    # Video showcase with lightbox
+│   ├── Aerial.jsx   # Aerial/drone services & gallery
+│   ├── Matterport.jsx # 3D virtual tours
 │   ├── About.jsx    # About the business
 │   └── Contact.jsx  # Contact form (Netlify Forms)
 ├── App.jsx          # Main app with routing
@@ -132,8 +137,9 @@ The navbar uses React Router's NavLink component to show active page states:
 - Contact button has special active state styling
 - Mobile menu shows active state with background color
 - NavLink components automatically add 'active' class to current page
+- Navigation includes: Home, Services, Gallery, Video, Aerial, 3D Tours, About, Book Now
 
-### Recent UI Enhancements (June 26, 2025)
+### Recent UI Enhancements (June 26-27, 2025)
 
 #### Contact Form Redesign
 The contact form has been significantly enhanced for better user experience:
@@ -183,7 +189,25 @@ body {
 - The negative margin technique (`margin-left: calc(-50vw + 50%)`) is used intentionally for full-width backgrounds
 - Container content should be constrained with `max-width: 1400px`
 
+### Lightbox Components
+The site uses three specialized lightbox components:
+- **Lightbox.jsx**: For image galleries with navigation
+- **VideoLightbox.jsx**: For Vimeo video playback
+- **MatterportLightbox.jsx**: For 3D virtual tours
+
+All lightboxes use consistent styling and close with × button or overlay click.
+
 ## Version History
+
+### June 27, 2025
+- Added dedicated Aerial Services page with gallery
+- Implemented Video and Matterport lightbox components
+- Added "Schedule X Shoot" CTA buttons to service pages
+- Fixed lightbox close buttons (replaced icons with × character)
+- Enhanced gallery with lightbox functionality across all pages
+- Added analytics placeholder (Netlify Analytics recommended)
+- Created hero background video loop
+- Updated all CTAs to booking-focused language
 
 ### June 26, 2025
 - Added navigation active states with NavLink

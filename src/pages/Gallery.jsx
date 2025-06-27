@@ -69,6 +69,14 @@ const Gallery = () => {
           >
             Showcasing properties throughout the Brainerd Lakes Area
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            style={{ marginTop: '2rem' }}
+          >
+            <Link to="/contact" className="hero-cta-btn">Schedule Photo Shoot</Link>
+          </motion.div>
         </div>
       </section>
 
