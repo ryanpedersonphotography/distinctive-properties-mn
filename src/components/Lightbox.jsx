@@ -45,8 +45,9 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onNavigate }) => {
               <button 
                 className="lightbox-nav lightbox-prev" 
                 onClick={() => onNavigate(currentIndex - 1)}
+                aria-label="Previous image"
               >
-                <FaChevronLeft />
+                ‹
               </button>
             )}
             
@@ -54,8 +55,9 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onNavigate }) => {
               <button 
                 className="lightbox-nav lightbox-next" 
                 onClick={() => onNavigate(currentIndex + 1)}
+                aria-label="Next image"
               >
-                <FaChevronRight />
+                ›
               </button>
             )}
             

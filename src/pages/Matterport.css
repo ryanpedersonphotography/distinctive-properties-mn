@@ -95,6 +95,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .tour-card:hover {
@@ -116,6 +117,38 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.tour-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.tour-card:hover .tour-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.view-button {
+  background: white;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tour-card:hover .view-button {
+  transform: scale(1.1);
 }
 
 .tour-info {

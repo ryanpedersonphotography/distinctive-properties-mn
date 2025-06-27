@@ -1,11 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
+import MatterportLightbox from '../components/MatterportLightbox';
 import './Matterport.css';
 
 const Matterport = () => {
+  const [selectedTour, setSelectedTour] = useState(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const openLightbox = (tour) => {
+    setSelectedTour(tour);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setTimeout(() => setSelectedTour(null), 300);
+  };
 
   const tours = [
     {
@@ -65,26 +79,22 @@ const Matterport = () => {
             
             <div className="tours-grid">
               {tours.map(tour => (
-                <div key={tour.id} className="tour-card">
+                <div key={tour.id} className="tour-card" onClick={() => openLightbox(tour)}>
                   <div className="tour-iframe-wrapper">
                     <iframe
                       src={tour.url}
                       title={tour.title}
                       allow="fullscreen; vr"
                       allowFullScreen
+                      style={{ pointerEvents: 'none' }}
                     />
+                    <div className="tour-overlay">
+                      <div className="view-button">View 3D Tour</div>
+                    </div>
                   </div>
                   <div className="tour-info">
                     <h3>{tour.title}</h3>
                     <p>{tour.description}</p>
-                    <a 
-                      href={tour.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="tour-link"
-                    >
-                      View Full Screen →
-                    </a>
                   </div>
                 </div>
               ))}
@@ -187,6 +197,12 @@ const Matterport = () => {
           </div>
         </section>
       </div>
+      
+      <MatterportLightbox 
+        isOpen={isLightboxOpen} 
+        onClose={closeLightbox} 
+        tour={selectedTour} 
+      />
     </>
   );
 };
