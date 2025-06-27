@@ -1,11 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
+import VideoLightbox from '../components/VideoLightbox';
 import './Video.css';
 
 const Video = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const openLightbox = (video) => {
+    setSelectedVideo(video);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setTimeout(() => setSelectedVideo(null), 300);
+  };
 
   const videos = [
     {
@@ -77,15 +91,21 @@ const Video = () => {
             
             <div className="videos-grid">
               {videos.map(video => (
-                <div key={video.id} className="video-card">
+                <div key={video.id} className="video-card" onClick={() => openLightbox(video)}>
                   <div className="video-wrapper">
-                    <iframe
-                      src={`https://player.vimeo.com/video/${video.vimeoId}?h=0&badge=0&autopause=0&player_id=0&app_id=58479`}
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      title={video.title}
-                    />
+                    <div className="video-thumbnail">
+                      <iframe
+                        src={`https://player.vimeo.com/video/${video.vimeoId}?h=0&badge=0&autopause=0&player_id=0&app_id=58479`}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        title={video.title}
+                        style={{ pointerEvents: 'none' }}
+                      />
+                      <div className="video-overlay">
+                        <div className="play-button">▶</div>
+                      </div>
+                    </div>
                   </div>
                   <div className="video-info">
                     <h3>{video.title}</h3>
@@ -216,6 +236,12 @@ const Video = () => {
           </div>
         </section>
       </div>
+      
+      <VideoLightbox 
+        isOpen={isLightboxOpen} 
+        onClose={closeLightbox} 
+        video={selectedVideo} 
+      />
     </>
   );
 };

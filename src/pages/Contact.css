@@ -142,8 +142,8 @@
   display: block;
   margin-bottom: 0.75rem;
   font-weight: 600;
-  color: var(--primary-color);
-  font-size: 1.05rem;
+  color: #1a365d;
+  font-size: 1.1rem;
   letter-spacing: 0.3px;
 }
 
@@ -155,7 +155,9 @@
   border-radius: 10px;
   font-size: 1.1rem;
   transition: all 0.3s;
-  background-color: #f8fafc;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: inherit;
 }
 
 .form-group input:focus,
@@ -186,6 +188,12 @@
   border-radius: 4px;
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
 .checkbox-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -207,6 +215,7 @@
   border-radius: 8px;
   transition: background-color 0.2s;
   min-height: 48px;
+  color: #333333;
 }
 
 .checkbox-label:hover {
@@ -279,6 +288,7 @@
   transition: all 0.2s;
   border: 2px solid transparent;
   min-height: 56px;
+  color: #333333;
 }
 
 .radio-label:hover {
