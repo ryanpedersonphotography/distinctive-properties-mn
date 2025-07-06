@@ -45,15 +45,17 @@ const Home = () => {
       />
       
       <section className="hero" ref={heroRef}>
-        <video 
-          className="hero-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="/videos/hero-loop.mp4" type="video/mp4" />
-        </video>
+        <div className="hero-image" style={{
+          backgroundImage: 'url(/images/real-photos/DJI_0984.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1
+        }}></div>
         <div className="hero-overlay"></div>
         <div className="hero-content container">
           <motion.h1 
