@@ -64,7 +64,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <NavLink to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>
-              Book Now
+              Book an Appointment
             </NavLink>
           </li>
         </ul>

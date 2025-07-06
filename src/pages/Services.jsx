@@ -167,7 +167,7 @@ const Services = () => {
               <p>Standard 24-48 hour delivery with rush options available</p>
             </div>
           </div>
-          <Link to="/contact" className="btn">Get a Custom Quote</Link>
+          <Link to="/contact" className="btn">Book an Appointment</Link>
         </div>
       </section>
     </>

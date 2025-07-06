@@ -139,7 +139,7 @@ const Contact = () => {
               <h2>Get in Touch</h2>
               <p className="contact-intro">
                 Ready to showcase your property with professional media? 
-                Contact us today for a custom quote and fast turnaround.
+                Contact us today to book an appointment and get fast turnaround.
               </p>
               
               <div className="contact-details">
@@ -203,8 +203,8 @@ const Contact = () => {
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
-                <h2>🏠 Request a Quote</h2>
-                <div className="form-tagline">Free Quote • Fast Response • Professional Service</div>
+                <h2>🏠 Book an Appointment</h2>
+                <div className="form-tagline">Free Consultation • Fast Response • Professional Service</div>
                 
                 <div className="form-group">
                   <label htmlFor="name">Name *</label>

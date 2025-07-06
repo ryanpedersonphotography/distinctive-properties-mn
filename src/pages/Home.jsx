@@ -80,7 +80,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link to="/contact" className="btn">Book an Appointment Now</Link>
+            <Link to="/contact" className="btn">Book an Appointment</Link>
             <Link to="/gallery" className="btn btn-secondary">View Portfolio</Link>
           </motion.div>
         </div>

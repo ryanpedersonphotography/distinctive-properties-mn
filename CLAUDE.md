@@ -214,6 +214,10 @@ All lightboxes use consistent styling and close with × button or overlay click.
 - Added analytics placeholder (Netlify Analytics recommended)
 - Created hero background video loop
 - Updated all CTAs to booking-focused language
+- Renamed Gallery to "Stills" focusing on interior/exterior photography
+- Added background images to all hero sections for visual consistency
+- Fixed internal navigation links to use React Router Link components
+- Updated global documentation to prevent navigation mistakes
 
 ### June 26, 2025
 - Added navigation active states with NavLink
